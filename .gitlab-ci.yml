@@ -13,7 +13,7 @@ stages:
 build-latest:
   stage: build
   script:
-    - docker build --build-arg TICKET_ID=$TICKET_ID --pull -t $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME -f Dockerfile .
+    - docker build --pull -t $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME -f Dockerfile .
     - docker push $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
     - docker tag $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME $CI_REGISTRY_IMAGE:latest
     - docker push $CI_REGISTRY_IMAGE:latest
