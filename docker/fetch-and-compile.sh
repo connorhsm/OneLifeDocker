@@ -1,4 +1,5 @@
 #!/bin/sh
+latestTaggedVersion=67
 
 if [ ! -e minorGems ]
 then
@@ -18,32 +19,19 @@ fi
 
 cd minorGems
 git fetch
-latestTaggedVersion=`git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags | sed -e 's/OneLife_v//'`
 git checkout -q OneLife_v$latestTaggedVersion
 
 
 cd ../OneLife
 git fetch
-latestTaggedVersionA=`git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags | sed -e 's/OneLife_v//'`
-git checkout -q OneLife_v$latestTaggedVersionA
+git checkout -q OneLife_v$latestTaggedVersion
 
 
 cd ../OneLifeData7
 git fetch
-latestTaggedVersionB=`git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags | sed -e 's/OneLife_v//'`
-git checkout -q OneLife_v$latestTaggedVersionB
+git checkout -q OneLife_v$latestTaggedVersion
 
 rm */cache.fcz
-
-
-latestVersion=$latestTaggedVersionB
-
-
-if [ $latestTaggedVersionA -gt $latestTaggedVersionB ]
-then
-	latestVersion=$latestTaggedVersionA
-fi
-
 
 
 cd ..
