@@ -107,5 +107,19 @@ ln -s ../../OneLifeData7/objects .
 ln -s ../../OneLifeData7/transitions .
 ln -s ../../OneLifeData7/categories .
 
+mkdir db
+
+ln -s db/biome.db .
+ln -s db/eve.db .
+ln -s db/floor.db .
+ln -s db/floorTime.db .
+ln -s db/map.db .
+ln -s db/mapTime.db .
+ln -s db/playerStats.db .
+ln -s db/recentPlacements.txt .
+ln -s db/settings/nextPlayerID.ini .
+ln -s db/settings/sequenceNumber.ini .
+
+
 sed -i 's/1/0/' settings/useStatsServer.ini
 sed -i 's/1/0/' settings/requireTicketServerCheck.ini
