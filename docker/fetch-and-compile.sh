@@ -1,7 +1,9 @@
 #!/bin/sh
+set -e
+
 minorGemsVersion=70
 oneLifeVersion=70
-oneLifeDataVersion=67
+oneLifeDataVersion=71
 
 if [ ! -e minorGems ]
 then
@@ -33,7 +35,6 @@ cd ../OneLifeData7
 git fetch
 git checkout -q OneLife_v$oneLifeDataVersion
 
-rm */cache.fcz
 
 
 cd ..
@@ -91,14 +92,6 @@ if [ ! -h dataVersionNumber.txt ]
 then
 	ln -s OneLifeData7/dataVersionNumber.txt .
 fi
-
-
-
-
-cp OneLife/build/source/runToBuild .
-
-
-./runToBuild 1
 
 
 cd OneLife/server
