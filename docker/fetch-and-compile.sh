@@ -1,5 +1,7 @@
 #!/bin/sh
-latestTaggedVersion=67
+minorGemsVersion=70
+oneLifeVersion=70
+oneLifeDataVersion=67
 
 if [ ! -e minorGems ]
 then
@@ -19,17 +21,17 @@ fi
 
 cd minorGems
 git fetch
-git checkout -q OneLife_v$latestTaggedVersion
+git checkout -q OneLife_v$minorGemsVersion
 
 
 cd ../OneLife
 git fetch
-git checkout -q OneLife_v$latestTaggedVersion
+git checkout -q OneLife_v$oneLifeVersion
 
 
 cd ../OneLifeData7
 git fetch
-git checkout -q OneLife_v$latestTaggedVersion
+git checkout -q OneLife_v$oneLifeDataVersion
 
 rm */cache.fcz
 
@@ -119,7 +121,3 @@ ln -s db/playerStats.db .
 ln -s db/recentPlacements.txt .
 ln -s db/settings/nextPlayerID.ini .
 ln -s db/settings/sequenceNumber.ini .
-
-
-sed -i 's/1/0/' settings/useStatsServer.ini
-sed -i 's/1/0/' settings/requireTicketServerCheck.ini
