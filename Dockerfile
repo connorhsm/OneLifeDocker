@@ -2,6 +2,7 @@ FROM alpine:latest
 
 RUN apk --no-cache add build-base curl git g++ imagemagick xclip sdl-dev mesa-dev make libpng-dev nano
 
+ADD ./cache/ /opt
 ADD ./docker/fetch-and-compile.sh /opt/
 RUN cd opt && ./fetch-and-compile.sh
 
