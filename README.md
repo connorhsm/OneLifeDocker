@@ -6,7 +6,7 @@ This will let you easily bring up a container running a One Hour One Life game s
 
 You will need to have Docker installed to build and run the image.  From the repo root in your terminal run:
 
-`$ docker build -t ludwigf/ohol-server:70.70.71 .`
+`$ docker build -t ludwigf/ohol-server:70git49defca98-70-71 .`
 
 ## Working with the server
 

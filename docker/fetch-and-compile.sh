@@ -1,9 +1,9 @@
 #!/bin/sh
 set -e
 
-minorGemsVersion=70
-oneLifeVersion=70
-oneLifeDataVersion=71
+minorGemsVersion=OneLife_v70
+oneLifeVersion=49defca989b3451fe81125ecda55be6c2419e13b
+oneLifeDataVersion=OneLife_v71
 
 if [ ! -e minorGems ]
 then
@@ -23,84 +23,28 @@ fi
 
 cd minorGems
 git fetch
-git checkout -q OneLife_v$minorGemsVersion
+git checkout -q $minorGemsVersion
 
 
 cd ../OneLife
 git fetch
-git checkout -q OneLife_v$oneLifeVersion
+git checkout -q $oneLifeVersion
 
 
 cd ../OneLifeData7
 git fetch
-git checkout -q OneLife_v$oneLifeDataVersion
+git checkout -q $oneLifeDataVersion
 
 
 
-cd ..
-
-
-if [ ! -h animations ]
-then
-	ln -s OneLifeData7/animations .
-fi
-
-
-if [ ! -h categories ]
-then
-	ln -s OneLifeData7/categories .
-fi
-
-
-if [ ! -h ground ]
-then
-	ln -s OneLifeData7/ground .
-fi
-
-
-if [ ! -h music ]
-then
-	ln -s OneLifeData7/music .
-fi
-
-
-if [ ! -h objects ]
-then
-	ln -s OneLifeData7/objects .
-fi
-
-
-if [ ! -h sounds ]
-then
-	ln -s OneLifeData7/sounds .
-fi
-
-
-if [ ! -h sprites ]
-then
-	ln -s OneLifeData7/sprites .
-fi
-
-
-if [ ! -h transitions ]
-then
-	ln -s OneLifeData7/transitions .
-fi
-
-
-if [ ! -h dataVersionNumber.txt ]
-then
-	ln -s OneLifeData7/dataVersionNumber.txt .
-fi
-
-
-cd OneLife/server
+cd ../OneLife/server
 
 ./configure 1
 make
 ln -s ../../OneLifeData7/objects .
 ln -s ../../OneLifeData7/transitions .
 ln -s ../../OneLifeData7/categories .
+ln -s ../../OneLifeData7/dataVersionNumber.txt .
 
 mkdir db
 
