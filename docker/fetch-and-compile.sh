@@ -1,9 +1,11 @@
 #!/bin/sh
 set -e
 
-minorGemsVersion=OneLife_v70
-oneLifeVersion=49defca989b3451fe81125ecda55be6c2419e13b
-oneLifeDataVersion=OneLife_v71
+minorGemsVersion=OneLife_v72
+oneLifeVersion=OneLife_v72
+oneLifeDataVersion=OneLife_v73
+
+echo "Version ${oneLifeVersion}.${minorGemsVersion}.${oneLifeDataVersion}"
 
 if [ ! -e minorGems ]
 then
