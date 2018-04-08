@@ -60,3 +60,5 @@ ln -s db/playerStats.db .
 ln -s db/recentPlacements.txt .
 ln -s db/settings/nextPlayerID.ini .
 ln -s db/settings/sequenceNumber.ini .
+
+cp -r settings default-settings
