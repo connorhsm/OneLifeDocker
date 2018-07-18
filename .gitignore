@@ -1,3 +1,4 @@
 .env
 ticketID.cfg
-*.db
+/db/
+/settings/
