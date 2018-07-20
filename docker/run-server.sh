@@ -10,4 +10,4 @@ for f in $(ls default-settings); do
   fi
 done
 
-./OneLifeServer
+unbuffer ./OneLifeServer
