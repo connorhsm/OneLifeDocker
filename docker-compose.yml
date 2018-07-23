@@ -3,6 +3,7 @@ services:
   ohol:
     build: .
     image: ohol-server:latest
+    container_name: ohol-server
     ports:
       - '8005:8005'
     

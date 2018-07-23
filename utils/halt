@@ -1,3 +1,16 @@
 #!/usr/bin/env bash
+if [ "$1" = "force" ]
+then
+   shutdownFile=settings/forceShutdownMode.ini
+else
+  shutdownFile=settings/shutdownMode.ini
+fi
 
-docker-compose -f docker-compose.yml stop;
+if [ -e $shutdownFile ]
+then
+    echo -n 1 > $shutdownFile
+    docker logs --tail 1 -f ohol-server
+    echo -n 0 > $shutdownFile
+else
+    echo "Please run this command from the ohol-docker directory"
+fi
