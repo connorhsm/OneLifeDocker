@@ -21,5 +21,5 @@ Some possibly usefull patches are provided in the `examples` subdirectories of e
 #### `OneLife/examples/private_server_defaults.patch`
 Sets some reasonable default settings for private servers.  Specifically, it turns on requireClientPassword, and turns off requireTicketServerCheck, useLineageServer and useStatsServer.  Note that this only affects the default settings that get copied into the shared settings folder the first time you run your container.  If that folder is already populated, those settings will still be used.
 
-#### `OneLifeData/examples/no_basket_decay.patch`
-Stops baskets from turning to floppy baskets after 10 hours.
+#### `OneLifeData/examples/no_container_decay.patch`
+Stops baskets, backpacks, wheelbarrows and carts from decaying.
