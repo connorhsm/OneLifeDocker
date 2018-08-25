@@ -23,3 +23,6 @@ Sets some reasonable default settings for private servers.  Specifically, it tur
 
 #### `OneLifeData/examples/no_container_decay.patch`
 Stops baskets, backpacks, wheelbarrows and carts from decaying.
+
+#### `OneLifeData/examples/no_clothing_decay.patch`
+Stops hats, shirts, pants and shoes from decaying into rags.
