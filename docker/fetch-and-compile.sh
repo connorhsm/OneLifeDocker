@@ -80,18 +80,5 @@ ln -s ../../OneLifeData7/dataVersionNumber.txt .
 echo $oneLifeVersion > serverCodeVersionNumber.txt
 echo $latestVersion > versionNumber.txt
 
-mkdir db
-
-ln -s db/biome.db .
-ln -s db/eve.db .
-ln -s db/floor.db .
-ln -s db/floorTime.db .
-ln -s db/lookTime.db .
-ln -s db/map.db .
-ln -s db/mapTime.db .
-ln -s db/playerStats.db .
-ln -s db/recentPlacements.txt .
-ln -s db/settings/nextPlayerID.ini .
-ln -s db/settings/sequenceNumber.ini .
-
-cp -r settings default-settings
+mkdir data
+mkdir data/settings

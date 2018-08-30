@@ -1,13 +1,18 @@
 #!/bin/sh
 
-cd /opt/OneLife/server/
+cd /opt/OneLife/server
 
 # check config
-for f in $(ls default-settings); do
-  if [ ! -e "settings/$f" ]; then
+if [ ! -d "data/settings" ]; then
+  mkdir data/settings
+fi
+
+for f in $(ls settings/* *Names.txt); do
+  if [ ! -e "data/$f" ]; then
    echo "creating default config $f"
-   cp "default-settings/$f" "settings/$f"
+   cp "$f" "data/$f"
   fi
 done
 
-unbuffer ./OneLifeServer
+cd data
+unbuffer ../OneLifeServer

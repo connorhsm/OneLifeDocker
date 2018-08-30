@@ -18,7 +18,7 @@ COPY --from=0 /opt/OneLifeData7/dataVersionNumber.txt /opt/OneLifeData7/dataVers
 ADD ./docker/run-server.sh /opt/
 
 EXPOSE 8005
-VOLUME /opt/OneLife/server/db
+VOLUME /opt/OneLife/server/data
 
 WORKDIR /opt/OneLife/server
 CMD /opt/run-server.sh
