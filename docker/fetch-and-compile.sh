@@ -72,13 +72,10 @@ cd ../OneLife/server
 
 ./configure 1
 make
-ln -s ../../OneLifeData7/objects .
-ln -s ../../OneLifeData7/transitions .
-ln -s ../../OneLifeData7/categories .
-ln -s ../../OneLifeData7/tutorialMaps .
-ln -s ../../OneLifeData7/dataVersionNumber.txt .
+./makeDBConvert
+
 echo $oneLifeVersion > serverCodeVersionNumber.txt
-echo $latestVersion > versionNumber.txt
+echo $latestVersion > /opt/versionNumber.txt
 
 mkdir data
 mkdir data/settings

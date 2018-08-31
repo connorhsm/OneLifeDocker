@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 if [ "$1" = "force" ]
 then
-   shutdownFile=settings/forceShutdownMode.ini
+   shutdownFile=data/settings/forceShutdownMode.ini
 else
-  shutdownFile=settings/shutdownMode.ini
+  shutdownFile=data/settings/shutdownMode.ini
 fi
 
 if [ -e $shutdownFile ]

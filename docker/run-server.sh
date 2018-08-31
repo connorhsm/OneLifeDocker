@@ -15,4 +15,12 @@ for f in $(ls settings/* *Names.txt); do
 done
 
 cd data
+
+ln -s /opt/OneLifeData7/objects .
+ln -s /opt/OneLifeData7/transitions .
+ln -s /opt/OneLifeData7/categories .
+ln -s /opt/OneLifeData7/tutorialMaps .
+ln -s /opt/OneLifeData7/dataVersionNumber.txt .
+ln -s /opt/OneLife/server/serverCodeVersionNumber.txt .
+
 unbuffer ../OneLifeServer
