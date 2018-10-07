@@ -1,15 +1,15 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
-RUN apk --no-cache add build-base curl git g++ imagemagick xclip sdl-dev mesa-dev make libpng-dev nano
+RUN apt-get update && apt-get install -y git g++ imagemagick xclip libsdl1.2-dev libglu1-mesa-dev libgl1-mesa-dev
 
 ADD ./docker/fetch-and-compile.sh /opt/
 ADD ./docker/patches /opt/patches
 RUN cd opt && ./fetch-and-compile.sh
 
 
-FROM alpine:latest
+FROM ubuntu:latest
 
-RUN apk --no-cache add --no-cache libstdc++ expect
+RUN apt-get update && apt-get install -y expect
 COPY --from=0 /opt/OneLife/server /opt/OneLife/server
 COPY --from=0 /opt/OneLifeData7/categories /opt/OneLifeData7/categories
 COPY --from=0 /opt/OneLifeData7/objects /opt/OneLifeData7/objects
