@@ -27,3 +27,4 @@ VOLUME /opt/OneLife/server/data
 
 WORKDIR /opt/OneLife/server
 CMD /opt/run-server.sh
+STOPSIGNAL SIGTSTP
