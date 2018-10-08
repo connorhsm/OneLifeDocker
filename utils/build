@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+docker-compose -f docker-compose.yml build --pull --no-cache
+
+VERSION=`docker run --rm ohol-server:latest cat /opt/versionNumber.txt`
+docker tag ohol-server:latest ohol-server:$VERSION
+
+echo Built server image - ohol-server:latest ohol-server:$VERSION

@@ -19,6 +19,7 @@ COPY --from=build /opt/OneLifeData7/categories /opt/OneLifeData7/categories
 COPY --from=build /opt/OneLifeData7/objects /opt/OneLifeData7/objects
 COPY --from=build /opt/OneLifeData7/transitions /opt/OneLifeData7/transitions
 COPY --from=build /opt/OneLifeData7/dataVersionNumber.txt /opt/OneLifeData7/dataVersionNumber.txt
+COPY --from=build /opt/versionNumber.txt /opt/versionNumber.txt
 
 ADD ./docker/run-server.sh /opt/
 

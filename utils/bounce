@@ -3,7 +3,7 @@
 if [ "$1" = "hard" ]; then
    ./utils/destroy
 else
-  ./utils/halt
+  ./utils/stop
 fi
 
-./utils/up
+./utils/start
