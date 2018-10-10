@@ -4,6 +4,7 @@ services:
     build: .
     image: ohol-server:latest
     container_name: ohol-server
+    tty: true
     ports:
       - '8005:8005'
     

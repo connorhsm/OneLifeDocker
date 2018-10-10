@@ -23,4 +23,4 @@ ln -s /opt/OneLifeData7/tutorialMaps .
 ln -s /opt/OneLifeData7/dataVersionNumber.txt .
 ln -s /opt/OneLife/server/serverCodeVersionNumber.txt .
 
-unbuffer ../OneLifeServer
+../OneLifeServer

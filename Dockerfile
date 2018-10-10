@@ -1,7 +1,4 @@
-FROM ubuntu:latest AS build
-
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y git g++ make
+FROM buildpack-deps:latest AS build
 
 ADD ./docker/fetch-and-compile.sh /opt/
 ADD ./docker/patches /opt/patches
@@ -9,10 +6,8 @@ ADD ./docker/patches /opt/patches
 RUN cd opt && ./fetch-and-compile.sh
 
 
-FROM ubuntu:latest
 
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y expect
+FROM ubuntu:latest
 
 COPY --from=build /opt/OneLife/server /opt/OneLife/server
 COPY --from=build /opt/OneLifeData7/categories /opt/OneLifeData7/categories
