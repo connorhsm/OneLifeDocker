@@ -4,11 +4,11 @@ This will let you easily bring up a container running a One Hour One Life game s
 
 ## Running the server
 
-Run `utils/up`.  This will start the server and begin following it's output.  Press `ctrl-c` to stop watching the output.  It will continue running in the background.  `utils/halt` will put the server in shutdown mode.  No new players will be allowed to connect, and once the last player leaves, the server will shut down.  `utils/halt force` will tell the server to disconnect all players and begin shutting down immediately.
+Run `utils/start`.  This will start the server and begin following it's output.  Press `ctrl-c` to stop watching the output.  It will continue running in the background.  `utils/stop` will put the server in shutdown mode.  No new players will be allowed to connect, and once the last player leaves, the server will shut down.  `utils/stop force` will tell the server to disconnect all players and begin shutting down immediately.
 
 ## Rebuild the image
 
-As new versions of the game are released, you will need to rebuild the server image.  Run `docker-compose build --no-cache` to fetch the latest version of the server and build a new Docker image with it.
+As new versions of the game are released, you will need to rebuild the server image.  Run `utils/build` to fetch the latest version of the server and build a new Docker image with it.
 
 ## Patches
 
