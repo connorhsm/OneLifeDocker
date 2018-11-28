@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /opt/OneLife/server
+cd /usr/OneLife/server
 
 # check config
 if [ ! -d "data/settings" ]; then
@@ -16,11 +16,11 @@ done
 
 cd data
 
-ln -s /opt/OneLifeData7/objects .
-ln -s /opt/OneLifeData7/transitions .
-ln -s /opt/OneLifeData7/categories .
-ln -s /opt/OneLifeData7/tutorialMaps .
-ln -s /opt/OneLifeData7/dataVersionNumber.txt .
-ln -s /opt/OneLife/server/serverCodeVersionNumber.txt .
+ln -s /usr/OneLifeData7/objects .
+ln -s /usr/OneLifeData7/transitions .
+ln -s /usr/OneLifeData7/categories .
+ln -s /usr/OneLifeData7/tutorialMaps .
+ln -s /usr/OneLifeData7/dataVersionNumber.txt .
+ln -s /usr/OneLife/server/serverCodeVersionNumber.txt .
 
 ../OneLifeServer
