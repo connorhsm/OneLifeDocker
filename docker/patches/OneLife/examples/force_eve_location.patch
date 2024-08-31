@@ -1,0 +1,9 @@
+diff --git a/server/settings/forceEveLocation.ini b/server/settings/forceEveLocation.ini
+index c2270834..56a6051c 100644
+--- a/server/settings/forceEveLocation.ini
++++ b/server/settings/forceEveLocation.ini
+@@ -1 +1 @@
+-0
+\ No newline at end of file
++1
+\ No newline at end of file
