@@ -69,6 +69,7 @@ mkdir data/settings
 mkdir /dist
 mkdir /dist/OneLife
 cp -R /build/OneLife/server /dist/OneLife/server
+cp -R /build/OneLifeData7/contentSettings /dist/OneLife/server
 
 mkdir /dist/OneLifeData7
 cp -R /build/OneLifeData7/categories /dist/OneLifeData7/categories

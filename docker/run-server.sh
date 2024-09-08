@@ -7,7 +7,11 @@ if [ ! -d "data/settings" ]; then
   mkdir data/settings
 fi
 
-for f in $(ls settings/* *Names.txt); do
+if [ ! -d "data/contentSettings" ]; then
+  mkdir data/contentSettings
+fi
+
+for f in $(ls settings/* contentSettings/* *Names.txt); do
   if [ ! -e "data/$f" ]; then
    echo "creating default config $f"
    cp "$f" "data/$f"
