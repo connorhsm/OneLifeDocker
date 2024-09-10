@@ -1,35 +1,3 @@
-diff --git a/transitions/-1_1605.txt b/transitions/-1_1605.txt
-deleted file mode 100644
-index 24342878..00000000
---- a/transitions/-1_1605.txt
-+++ /dev/null
-@@ -1 +0,0 @@
--0 1848 -10 0.000000 0.000000 0 0 0 1 0 1
-\ No newline at end of file
-diff --git a/transitions/-1_198.txt b/transitions/-1_198.txt
-deleted file mode 100644
-index 465b0ca3..00000000
---- a/transitions/-1_198.txt
-+++ /dev/null
-@@ -1 +0,0 @@
--0 874 -5 0.000000 0.000000 0 0 0 1 0 0
-\ No newline at end of file
-diff --git a/transitions/-1_212.txt b/transitions/-1_212.txt
-deleted file mode 100644
-index 465b0ca3..00000000
---- a/transitions/-1_212.txt
-+++ /dev/null
-@@ -1 +0,0 @@
--0 874 -5 0.000000 0.000000 0 0 0 1 0 0
-\ No newline at end of file
-diff --git a/transitions/-1_2172.txt b/transitions/-1_2172.txt
-deleted file mode 100644
-index adf900a1..00000000
---- a/transitions/-1_2172.txt
-+++ /dev/null
-@@ -1 +0,0 @@
--0 484 -10 0.000000 0.000000 0 0 0 1 0 0
-\ No newline at end of file
 diff --git a/transitions/-1_483.txt b/transitions/-1_483.txt
 deleted file mode 100644
 index 4b8201d5..00000000
@@ -37,20 +5,4 @@ index 4b8201d5..00000000
 +++ /dev/null
 @@ -1 +0,0 @@
 -0 1321 -10 0.000000 0.000000 0 0 0 1 0 0
-\ No newline at end of file
-diff --git a/transitions/-1_484.txt b/transitions/-1_484.txt
-deleted file mode 100644
-index 8ba89b25..00000000
---- a/transitions/-1_484.txt
-+++ /dev/null
-@@ -1 +0,0 @@
--0 861 -10 0.000000 0.000000 0 0 0 1
-\ No newline at end of file
-diff --git a/transitions/-1_929.txt b/transitions/-1_929.txt
-deleted file mode 100644
-index 44ca0c65..00000000
---- a/transitions/-1_929.txt
-+++ /dev/null
-@@ -1 +0,0 @@
--0 845 -10 0.000000 0.000000 0 0 0 1 0 0
 \ No newline at end of file
