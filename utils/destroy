@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
-docker-compose -f docker-compose.yml down;
+# Usage:
+#		./utils/destroy <ohol|2hol>
+
+source utils/functions/check-args.sh
+
+check_server_type_arg $1
+
+docker-compose -f docker-compose.$1.yml down;

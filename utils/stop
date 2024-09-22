@@ -1,16 +1,22 @@
 #!/usr/bin/env bash
-if [ "$1" = "force" ]
-then
-   shutdownFile=data/settings/forceShutdownMode.ini
+
+# Usage:
+#		./utils/stop <ohol|2hol> [force]
+
+source utils/functions/check-args.sh
+
+check_server_type_arg $1
+
+if [ "$2" == "force" ]; then
+	shutdownFile=$1-data/settings/forceShutdownMode.ini
 else
-  shutdownFile=data/settings/shutdownMode.ini
+	shutdownFile=$1-data/settings/shutdownMode.ini
 fi
 
-if [ -e $shutdownFile ]
-then
-    echo -n 1 > $shutdownFile
-    docker logs --tail 1 -f ohol-server
-    echo -n 0 > $shutdownFile
+if [ -e $shutdownFile ]; then
+ 	sudo su root -c "echo -n 1 >$shutdownFile"
+	docker logs --tail 1 -f $1-server
+	sudo su root -c "echo -n 0 >$shutdownFile"
 else
-    echo "Please run this command from the ohol-docker directory"
+	echo "Please run this command from the OneLifeDocker directory"
 fi

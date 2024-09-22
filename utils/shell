@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
-docker exec -it ohol-server /bin/sh
+# Usage:
+#		./utils/shell <ohol|2hol>
+
+source utils/functions/check-args.sh
+
+check_server_type_arg $1
+
+docker exec -it $1-server /bin/sh

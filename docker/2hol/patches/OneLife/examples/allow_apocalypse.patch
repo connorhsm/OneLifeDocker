@@ -1,0 +1,8 @@
+diff --git a/server/settings/apocalypsePossible.ini b/server/settings/apocalypsePossible.ini
+index 573541ac..56a6051c 100644
+--- a/server/settings/apocalypsePossible.ini
++++ b/server/settings/apocalypsePossible.ini
+@@ -1 +1 @@
+-0
++1
+\ No newline at end of file

@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
 
-if [ "$1" = "hard" ]; then
-   ./utils/destroy
+# Usage:
+#		./utils/bounce <ohol|2hol> [hard]
+
+source utils/functions/check-args.sh
+
+check_server_type_arg $1
+
+if [ "$2" = "hard" ]; then
+   ./utils/destroy $1
 else
-  ./utils/stop
+  ./utils/stop $1
 fi
 
-./utils/start
+./utils/start $1

@@ -1,0 +1,11 @@
+services:
+  2hol:
+    build:
+      dockerfile: docker/2hol/Dockerfile
+    image: 2hol-server:latest
+    container_name: 2hol-server
+    tty: true
+    ports:
+      - "8006:8005"
+    volumes:
+      - "./2hol-data:/usr/OneLife/server/data"

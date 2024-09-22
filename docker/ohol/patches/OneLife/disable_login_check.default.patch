@@ -1,0 +1,9 @@
+diff --git a/server/settings/requireTicketServerCheck.ini b/server/settings/requireTicketServerCheck.ini
+index 56a6051..c227083 100644
+--- a/server/settings/requireTicketServerCheck.ini
++++ b/server/settings/requireTicketServerCheck.ini
+@@ -1 +1 @@
+-1
+\ No newline at end of file
++0
+\ No newline at end of file

@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -ex
 
 cd /build
 
@@ -11,7 +11,7 @@ git fetch --tags
 minorGemsVersion=`git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags/OneLife_v* | sed -e 's/OneLife_v//'`
 git checkout -q OneLife_v$minorGemsVersion
 
-for patch in /build/patches/minorGems/*.patch
+for patch in /build/patches/minorGems/ohol_*.patch
 do
 	if [ -e $patch ]
 	then
@@ -28,7 +28,7 @@ git fetch --tags
 oneLifeVersion=`git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags/OneLife_v* | sed -e 's/OneLife_v//'`
 git checkout -q OneLife_v$oneLifeVersion
 
-for patch in /build/patches/OneLife/*.patch
+for patch in /build/patches/OneLife/ohol_*.patch
 do
 	if [ -e $patch ]
 	then
@@ -45,7 +45,7 @@ git fetch --tags
 oneLifeDataVersion=`git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags/OneLife_v* | sed -e 's/OneLife_v//'`
 git checkout -q OneLife_v$oneLifeDataVersion
 
-for patch in /build/patches/OneLifeData/*.patch
+for patch in /build/patches/OneLifeData/ohol_*.patch
 do
 	if [ -e $patch ]
 	then

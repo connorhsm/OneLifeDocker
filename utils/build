@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 
-docker-compose -f docker-compose.yml build --pull --no-cache
+# Usage:
+#		./utils/build <ohol|2hol>
 
-VERSION=`docker run --rm ohol-server:latest cat /usr/versionNumber.txt`
-docker tag ohol-server:latest ohol-server:$VERSION
+source utils/functions/check-args.sh
 
-echo Built server image - ohol-server:latest ohol-server:$VERSION
+check_server_type_arg $1
+
+docker-compose -f docker-compose.$1.yml build --pull --no-cache
+
+VERSION=`docker run --rm $1-server:latest cat /usr/versionNumber.txt`
+docker tag $1-server:latest $1-server:$VERSION
+
+echo Built server image - $1-server:latest $1-server:$VERSION

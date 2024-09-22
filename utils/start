@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
-docker-compose -f docker-compose.yml up -d;
+# Usage:
+#		./utils/start <ohol|2hol>
 
-docker logs -f ohol-server;
+source utils/functions/check-args.sh
+
+check_server_type_arg $1
+
+docker-compose -f docker-compose.$1.yml up -d
+
+docker logs -f $1-server

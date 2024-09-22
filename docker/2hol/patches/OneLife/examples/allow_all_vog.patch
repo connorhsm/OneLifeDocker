@@ -1,0 +1,12 @@
+diff --git a/server/settings/vogAllowAccounts.ini b/server/settings/vogAllowAccounts.ini
+index 90abac05..72e8ffc0 100644
+--- a/server/settings/vogAllowAccounts.ini
++++ b/server/settings/vogAllowAccounts.ini
+@@ -1,6 +1 @@
+-Colin-9391
+-Kripts-8568
+-risvh-8901
+-RainieDash-6757
+-liger1-2187
+-TanyaB-2264
++*
