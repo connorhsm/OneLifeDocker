@@ -8,13 +8,11 @@ cd /build
 git clone https://github.com/twohoursonelife/minorGems.git
 cd minorGems
 git fetch --tags
-minorGemsVersion=`git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags/2HOL_v* | sed -e 's/2HOL_v//'`
+minorGemsVersion=$(git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags/2HOL_v* | sed -e 's/2HOL_v//')
 git checkout -q 2HOL_v$minorGemsVersion
 
-for patch in /build/patches/minorGems/2hol_*.patch
-do
-	if [ -e $patch ]
-	then
+for patch in /build/patches/minorGems/*.patch; do
+	if [ -e $patch ]; then
 		echo Applying minorGems patch: $patch
 		git apply $patch
 	fi
@@ -25,13 +23,11 @@ cd /build
 git clone https://github.com/twohoursonelife/OneLife.git
 cd OneLife
 git fetch --tags
-oneLifeVersion=`git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags/2HOL_v* | sed -e 's/2HOL_v//'`
+oneLifeVersion=$(git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags/2HOL_v* | sed -e 's/2HOL_v//')
 git checkout -q 2HOL_v$oneLifeVersion
 
-for patch in /build/patches/OneLife/2hol_*.patch
-do
-	if [ -e $patch ]
-	then
+for patch in /build/patches/OneLife/*.patch; do
+	if [ -e $patch ]; then
 		echo Applying OneLife patch: $patch
 		git apply $patch
 	fi
@@ -42,13 +38,11 @@ cd /build
 git clone https://github.com/twohoursonelife/OneLifeData7.git
 cd OneLifeData7
 git fetch --tags
-oneLifeDataVersion=`git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags/2HOL_v* | sed -e 's/2HOL_v//'`
+oneLifeDataVersion=$(git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags/2HOL_v* | sed -e 's/2HOL_v//')
 git checkout -q 2HOL_v$oneLifeDataVersion
 
-for patch in /build/patches/OneLifeData/2hol_*.patch
-do
-	if [ -e $patch ]
-	then
+for patch in /build/patches/OneLifeData/*.patch; do
+	if [ -e $patch ]; then
 		echo Applying OneLifeData patch: $patch
 		git apply $patch
 	fi
@@ -61,7 +55,7 @@ cd /build/OneLife/server
 make
 ./makeDBConvert
 
-echo $oneLifeVersion > serverCodeVersionNumber.txt
+echo $oneLifeVersion >serverCodeVersionNumber.txt
 mkdir data
 mkdir data/settings
 
@@ -77,11 +71,10 @@ cp -R /build/OneLifeData7/transitions /dist/OneLifeData7/transitions
 cp -R /build/OneLifeData7/dataVersionNumber.txt /dist/OneLifeData7/dataVersionNumber.txt
 
 latestVersion=$oneLifeVersion
-if [ $oneLifeDataVersion -gt $oneLifeVersion ]
-then
+if [ $oneLifeDataVersion -gt $oneLifeVersion ]; then
 	latestVersion=$oneLifeDataVersion
 fi
-echo $latestVersion > /dist/versionNumber.txt
+echo $latestVersion >/dist/versionNumber.txt
 
 mkdir /dist/lib
 ldd /dist/OneLife/server/OneLifeServer | grep "=> /" | awk '{print $3}' | xargs -I '{}' cp -v '{}' /dist/lib

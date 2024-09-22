@@ -1,5 +1,5 @@
 diff --git a/server/settings/vogAllowAccounts.ini b/server/settings/vogAllowAccounts.ini
-index 90abac05..72e8ffc0 100644
+index 90abac05..f59ec20a 100644
 --- a/server/settings/vogAllowAccounts.ini
 +++ b/server/settings/vogAllowAccounts.ini
 @@ -1,6 +1 @@
@@ -10,3 +10,4 @@ index 90abac05..72e8ffc0 100644
 -liger1-2187
 -TanyaB-2264
 +*
+\ No newline at end of file

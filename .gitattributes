@@ -1,0 +1,4 @@
+# This little line saves a world of pain
+# when interacting with this repo on Windows
+# equal to git config core.autocrlf false
+* -text

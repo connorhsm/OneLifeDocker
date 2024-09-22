@@ -17,10 +17,10 @@ This guide will focus on 2HOL, but can very easily be translated to the OHOL opt
 2. Enter `cd Documents` (Or your preferred save location).
 3. Clone repo `git clone https://github.com/connorhsm/OneLifeDocker`.
 4. Enter `cd OneLifeDocker`.
-5. Build and start a 2HOL server `docker compose -f docker-compose.2hol.yml up -d`.
-6. Monitor the server logs `docker logs -f 2hol-server`.
-7. Destroy the server `docker compose -f docker-compose.2hol.yml down`.
-   1. This is an unsafe shut down. Currently held items will be deleted.
+5. Start the server `utils\start.cmd 2hol`.
+   1. Press `ctrl-c` to stop watching the output. It will continue running in the background.
+6. Stop the server `utils\stop.cmd 2hol`.
+   1. You can add `force` to kick all living players.
 
 ## Linux
 1. Open a terminal prompt.
@@ -39,27 +39,25 @@ Use your regular 2HOL client. Before logging in, change your custom server setti
 ## Update the server
 When the game is updated, you'll need to rebuild the server.
 
-- Windows: `docker compose -f docker-compose.2hol up -d --build`.
+- Windows: `utils\build 2hol`.
 - Linux: `utils/build 2hol`.
 - Start the server as above.
 
-## Patches and updating server settings
-Patches allow you to customise the server *before* the *first* run.
+## Change settings
+Either use Patches (see below) before the first build of the server or edit settings files found in `2hol-data/settings/`.
 
-### Update settings
-You can still update settings after the first run by editing settings files found in `2hol-data/settings/`. Admin permission may be required.
-
-### Patches
+## Patches
 See detailed description as in [README.md](README.md).
 
-Various patches can be found in `docker/2hol/OneLife/examples/` that can be used to configure your server to a certain preset, such as:
-- Vanilla
-- Speed running ([Speedrun.com](https://www.speedrun.com/Two_Hours_One_Life_2HOL) rules)
-- Other as you see fit
+Small changes that can be made to the server, which then requires a rebuild. Examples can be found in `docker/2hol/OneLife/examples/`.
 
 Apply these with:
-- Windows `move docker/2hol/OneLife/examples/speed_running.patch docker/2hol/OneLife/`
-- Linux: `cp docker/2hol/OneLife/examples/speed_running.patch docker/2hol/OneLife/`
+- Windows
+  - `move docker/2hol/OneLife/examples/xyz.patch docker/2hol/OneLife/`
+  - build
+- Linux
+  - `cp docker/2hol/OneLife/examples/xyz.patch docker/2hol/OneLife/`
+  - `utils/build 2hol`
 
 ## Wipe all data
 - Windows: `rmdir 2hol-data`
