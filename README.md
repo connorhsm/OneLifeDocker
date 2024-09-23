@@ -7,8 +7,9 @@ Supports:
 
 Default configuration is within rules defined by [Speedrun.com](https://www.speedrun.com/Two_Hours_One_Life_2HOL).
 
-## Full setup
-Not sure what Docker is? Need all the info including installation? Check out the [Full Setup guide](FULL_SETUP.md).
+## Setup
+- Need a fully fledged guide? See the [Full Setup guide](FULL_SETUP.md).
+- Need the leanest, most basic setup? See the [Simple Setup guide](SIMPLE_SETUP.md).
 
 ## Utils
 

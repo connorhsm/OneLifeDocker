@@ -8,16 +8,15 @@ This guide will focus on 2HOL, but can very easily be translated to the OHOL opt
 ### Docker
 - Install Docker https://docs.docker.com/engine/install/.
 
-### Git (recommended)
-- It's easiest to simply clone this repo and interact with it locally.
+### Git
 - Install Git https://git-scm.com/book/en/v2/Getting-Started-Installing-Git.
 
 ## Windows
 1. Open a command prompt.
 2. Enter `cd Documents` (Or your preferred save location).
-3. Clone repo `git clone https://github.com/connorhsm/OneLifeDocker`.
+3. Enter `git clone https://github.com/connorhsm/OneLifeDocker` to clone the repository.
 4. Enter `cd OneLifeDocker`.
-5. Start the server `utils\start.cmd 2hol`.
+5. Enter `utils\start.cmd 2hol` to start the server.
    1. Press `ctrl-c` to stop watching the output. It will continue running in the background.
 6. Stop the server `utils\stop.cmd 2hol`.
    1. You can add `force` to kick all living players.
@@ -31,10 +30,12 @@ This guide will focus on 2HOL, but can very easily be translated to the OHOL opt
 5. Stop the server safely `utils/stop 2hol force`.
 
 ## Play on the server
-Use your regular 2HOL client. Before logging in, change your custom server settings.
-1. Enable custom server.
-2. Enter custom server address `localhost`.
-3. Enter custom server port `8006`.
+Use your regular 2HOL client.
+1. Open your client.
+2. Open settings.
+3. Enable "Use custom server".
+4. Enter custom server address `localhost`.
+5. Enter custom server port `8006`.
 
 ## Update the server
 When the game is updated, you'll need to rebuild the server.
