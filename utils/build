@@ -7,7 +7,7 @@ source utils/functions/check-args.sh
 
 check_server_type_arg $1
 
-docker-compose -f docker-compose.$1.yml build --pull --no-cache
+docker compose -f docker-compose.$1.yml build --pull --no-cache
 
 VERSION=`docker run --rm $1-server:latest cat /usr/versionNumber.txt`
 docker tag $1-server:latest $1-server:$VERSION

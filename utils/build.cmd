@@ -5,7 +5,7 @@
 call utils\functions\check-args.cmd %1
 if errorlevel 1 exit /b 1
 
-docker-compose -f docker-compose.%1.yml build --pull --no-cache
+docker compose -f docker-compose.%1.yml build --pull --no-cache
 if errorlevel 1 exit /b 1
 
 for /f "tokens=*" %%i in ('docker run --rm %1-server:latest cat /usr/versionNumber.txt') do set VERSION=%%i
