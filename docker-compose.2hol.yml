@@ -6,6 +6,6 @@ services:
     container_name: 2hol-server
     tty: true
     ports:
-      - "8006:8005"
+      - "8006:8006"
     volumes:
       - "./2hol-data:/usr/OneLife/server/data"

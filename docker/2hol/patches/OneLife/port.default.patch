@@ -1,0 +1,9 @@
+diff --git a/server/settings/port.ini b/server/settings/port.ini
+index 41dec12c..c8a7d385 100644
+--- a/server/settings/port.ini
++++ b/server/settings/port.ini
+@@ -1 +1 @@
+-8005
+\ No newline at end of file
++8006
+\ No newline at end of file
