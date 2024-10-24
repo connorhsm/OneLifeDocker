@@ -3,6 +3,7 @@ services:
     build:
       dockerfile: docker/ohol/Dockerfile
     image: ghcr.io/connorhsm/ohol-server:latest
+    pull_policy: always
     container_name: ohol-server
     tty: true
     ports:

@@ -3,6 +3,7 @@ services:
     build:
       dockerfile: docker/2hol/Dockerfile
     image: ghcr.io/connorhsm/2hol-server:latest
+    pull_policy: always
     container_name: 2hol-server
     tty: true
     ports:
