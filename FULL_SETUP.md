@@ -17,7 +17,8 @@ This guide will focus on 2HOL, but can very easily be translated to the OHOL opt
 3. Enter `git clone https://github.com/connorhsm/OneLifeDocker` to clone the repository.
 4. Enter `cd OneLifeDocker`.
 5. Enter `utils\start.cmd 2hol` to start the server.
-   1. Press `ctrl-c` to stop watching the output. It will continue running in the background.
+   1. Start up on Windows can take 5-60 seconds, wait for the message "Server listenting on port ....".
+   2. Press `ctrl-c` to stop watching the output. It will continue running in the background.
 6. Stop the server `utils\stop.cmd 2hol`.
    1. You can add `force` to kick all living players.
 

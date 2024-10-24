@@ -9,7 +9,8 @@ You don't need or want to know nothin. You just want to play.
 5. Enter `git clone https://github.com/connorhsm/OneLifeDocker` to clone the repository.
 6. Enter `cd OneLifeDocker`.
 7. Enter `utils\start.cmd 2hol` to start the server.
-   1. You can then close the command prompt, it will keep running in the background.
+   1. Start up on Windows can take 5-60 seconds, wait for the message "Server listenting on port ....".
+   2. You can then close the command prompt, it will keep running in the background.
 
 ### Play on the server
 Use your regular 2HOL client.
