@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Usage:
-#		./utils/bounce <ohol|2hol> [hard]
+#		./utils/restart <ohol|2hol> [hard]
 
 source utils/functions/check-args.sh
 

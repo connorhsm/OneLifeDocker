@@ -24,6 +24,12 @@ Use your regular 2HOL client.
 2. Enter `cd Documents\OneLifeDocker`.
 3. Enter `utils\stop.cmd 2hol` to stop the server.
 
+### Stop and restart the server
+Potentially after changing a setting
+1. Open a command prompt.
+2. Enter `cd Documents\OneLifeDocker`.
+3. Enter `utils\restart.cmd 2hol` to stop and restart the server.
+
 ### Updating the server
 1. Open a command prompt.
 2. Enter `cd Documents\OneLifeDocker`.

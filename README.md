@@ -15,9 +15,17 @@ Default configuration is within rules defined by [Speedrun.com](https://www.spee
 
 Found in `utils/` are executables to build, run and manage either server.
 
+Windows:
+- `utils\build.cmd <ohol|2hol>`
+- `utils\start.cmd <ohol|2hol>`
+- `utils\stop.cmd <ohol|2hol>`
+- `utils\restart.cmd <ohol|2hol>`
+
+Linux:
 - `utils/build <ohol|2hol>`
 - `utils/start <ohol|2hol>`
 - `utils/stop <ohol|2hol>`
+- `utils/restart <ohol|2hol>`
 - and more
 
 ## Running the server
